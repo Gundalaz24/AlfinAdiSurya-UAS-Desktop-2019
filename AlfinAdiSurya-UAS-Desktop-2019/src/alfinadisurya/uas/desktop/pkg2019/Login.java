@@ -5,6 +5,8 @@
  */
 package alfinadisurya.uas.desktop.pkg2019;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author PeTIK
@@ -150,8 +152,18 @@ public class Login extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
+        
+        if(!"admin-admin".equals(tfusername.getText())){
+            JOptionPane.showMessageDialog(rootPane, "login gagal");
+        }
+        else if(!"admin-admin".equals(tfPass.getText())){
+            JOptionPane.showMessageDialog(rootPane, "login gagal");
+        }
+        else{
         Homepage go = new Homepage();
         go.setVisible(true);
+        }
+        
     }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
